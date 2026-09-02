@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maeve Charms — Wear the Moments That Matter.">
+  <title>Maeve Charms</title>
+  <link rel="icon" type="image/png" href="Assets/LOGO-Main-circle.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="page">
+
+    <header class="profile">
+      <img class="logo-mark" src="Assets/LOGO-Main-full.png" alt="Maeve Charms logo">
+<!--
+      <h1>Maeve Charms</h1>
+-->
+      <p class="tagline">Wear the Moments That Matter.</p>
+      <!--
+      <p class="intro">
+        Build a bracelet that's uniquely yours. Choose your charms,
+        create your style, and make a memory to take home.
+      </p>
+      -->
+    </header>
+
+    <section class="links" aria-label="Maeve Charms links">
+
+      <button class="link-card featured" type="button" id="packages-trigger" aria-haspopup="dialog">
+        <span class="icon">✦</span>
+        <span>
+          <strong>View our packages</strong>
+          <small>Bring the charm bar to your next event</small>
+        </span>
+        <span class="arrow">↑</span>
+      </button>
+
+      <a class="link-card" href="https://www.instagram.com/maeve.charms/" target="_blank" rel="noopener">
+        <span class="icon">◎</span>
+        <span>
+          <strong>Instagram</strong>
+          <small>Follow Us</small>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link-card" href="https://www.facebook.com/maeve.charms/" target="_blank" rel="noopener">
+        <span class="icon">f</span>
+        <span>
+          <strong>Facebook</strong>
+          <small>Like our page</small>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link-card" href="https://www.tiktok.com/@maeve.charms/" target="_blank" rel="noopener">
+        <span class="icon">♪</span>
+        <span>
+          <strong>Tiktok</strong>
+          <small>View our content</small>
+        </span>
+        <span class="arrow">↗</span>
+      </a>
+
+      <a class="link-card" href="mailto:maevecharmbar@gmail.com">
+        <span class="icon">✉</span>
+        <span>
+          <strong>Send an Inquiry</strong>
+          <small>Questions, bookings & event details</small>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+    </section>
+    <!--
+    <section class="event-card">
+      <p class="eyebrow">EVENT BOOKINGS</p>
+      <h2>Make your event a little more charming.</h2>
+      <p>
+        Perfect for birthdays, bridal events, parties, gatherings,
+        corporate events, and special occasions.
+      </p>
+      <a class="button" href="#" target="_blank" rel="noopener">Let's Create Something Special ✦</a>
+    </section>
+    -->
+
+    <dialog class="packages-modal" id="packages-modal" aria-labelledby="packages-title">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <p class="eyebrow">EVENT PACKAGES</p>
+            <h2 id="packages-title">Choose your charm experience.</h2>
+          </div>
+          <button class="modal-close" type="button" aria-label="Close packages">&times;</button>
+        </div>
+
+        <div class="package-grid">
+          <article class="package-option">
+            <p class="package-kicker">THE CLASSIC</p>
+            <h3>Classic Charm Bar</h3>
+            <!--<p class="package-price">₱6,999 <span>starting at 30 pax</span></p>-->
+            <p>Pick your bracelet and personalize it with five charms from our everyday collection.</p>
+            <ul>
+              <li>Silver Snake Chain Bracelets or Keychain</li>
+              <li>1 Premium & 4 classic charms per guest</li>
+              <li>Plastic packaging</li>
+              <li>and more...</li>
+            </ul>
+          </article>
+
+          <article class="package-option package-option-featured">
+            <p class="package-kicker">THE SIGNATURE</p>
+            <h3>Signature Charm Bar</h3>
+            <!--<p class="package-price">₱7,999 <span>starting at 30 pax</span></p>-->
+            <p>Make it extra special with a premium bracelet, five charms, and elevated keepsake packaging.</p>
+            <ul>
+              <li>Silver Snake Chain Bracelets or Keychain</li>
+              <li>2 Premium & 3 classic charms per guest</li>
+              <li>Mesh packaging</li>
+              <li>and more...</li>
+            </ul>
+          </article>
+        </div>
+
+        <section class="services" aria-labelledby="services-title">
+          <div class="services-heading">
+            <h3 id="services-title">Additional services</h3>
+            <span>Available with any package</span>
+          </div>
+          <div class="service-list">
+            <div><span>Extra charms</span><!--<strong>₱20 each</strong>--></div>
+            <div><span>Upgrade to gold</span><!--<strong>₱30 each</strong>--></div>
+            <div><span>Custom name charms</span><!--<strong>₱30 each</strong>--></div>
+            <div><span>Travel and setup</span><!--<strong>Custom quote</strong>--></div>
+          </div>
+        </section>
+
+        <a class="modal-inquiry" href="https://www.canva.com/">Inquire about your event <span>→</span></a>
+      </div>
+    </dialog>
+
+    <footer>
+      <p>MAEVE CHARMS</p>
+      <span>Your Story. Your Style. Your Bracelet.</span>
+    </footer>
+
+  </main>
+
+  <script>
+    const packagesTrigger = document.querySelector('#packages-trigger');
+    const packagesModal = document.querySelector('#packages-modal');
+    const modalClose = packagesModal.querySelector('.modal-close');
+
+    packagesTrigger.addEventListener('click', () => packagesModal.showModal());
+    modalClose.addEventListener('click', () => packagesModal.close());
+    packagesModal.addEventListener('click', (event) => {
+      if (event.target === packagesModal) packagesModal.close();
+    });
+  </script>
+</body>
+</html>
