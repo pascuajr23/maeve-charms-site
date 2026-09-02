@@ -225,6 +225,12 @@ h1 {
   gap: 12px;
 }
 
+@media (max-width: 600px) {
+  .package-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .package-option {
   padding: 20px;
   border: 1px solid var(--border);
@@ -440,7 +446,6 @@ footer span {
     padding: 22px 16px;
   }
 
-  .package-grid,
   .service-list {
     grid-template-columns: 1fr;
   }
