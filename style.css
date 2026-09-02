@@ -48,7 +48,7 @@ body {
 
 .logo-mark {
   display: block;
-  width: min(100%, 350px);
+  width: min(100%, 200px);
   height: auto;
   margin: 0 auto 18px;
   border-radius: 50%;
